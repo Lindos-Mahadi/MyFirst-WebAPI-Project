@@ -13,7 +13,7 @@ namespace MyFirst_WebAPI_Project
     {
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllers();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -21,14 +21,7 @@ namespace MyFirst_WebAPI_Project
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context => 
-                {
-                    await context.Response.WriteAsync("Hello from new Web Api");
-                });
-                endpoints.MapGet("/test", async context => 
-                {
-                    await context.Response.WriteAsync("Hello from new Web Api test");
-                });
+                endpoints.MapControllers();
             });
         }
 
