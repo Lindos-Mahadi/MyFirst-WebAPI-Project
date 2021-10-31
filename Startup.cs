@@ -18,9 +18,12 @@ namespace MyFirst_WebAPI_Project
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Run(async context => {
-                await context.Response.WriteAsync("Hello from Run Method");
+            app.Use(async (context, next) => {
+                await context.Response.WriteAsync("hello from Use Method");
             });
+            //app.Run(async context => {
+            //    await context.Response.WriteAsync("Hello from Run Method");
+            //});
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
