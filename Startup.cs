@@ -19,11 +19,15 @@ namespace MyFirst_WebAPI_Project
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.Use(async (context, next) => {
-                await context.Response.WriteAsync("hello from Use Method \n");
+                await context.Response.WriteAsync("hello from Use Method 1 \n");
                 await next();
             });
-            app.Run(async context => {
-                await context.Response.WriteAsync("Hello from Run Method");
+            app.Map("/lindos", customCode);
+            app.Use(async (context, next) => {
+                await context.Response.WriteAsync("Hello from Use Method 2 \n");
+            }); 
+            app.Use(async (context, next) => {
+                await context.Response.WriteAsync("Hello from Use Method");
             });
             if (env.IsDevelopment())
             {
@@ -37,6 +41,12 @@ namespace MyFirst_WebAPI_Project
             });
         }
 
-
+        private void customCode(IApplicationBuilder app)
+        {
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Hello from lindos \n");
+            });
+        }
     }
 }
