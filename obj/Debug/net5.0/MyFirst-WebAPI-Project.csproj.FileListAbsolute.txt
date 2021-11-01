@@ -18,4 +18,3 @@ F:\DotNetCore\MyFirst-WebAPI-Project\obj\Debug\net5.0\MyFirst-WebAPI-Project.dll
 F:\DotNetCore\MyFirst-WebAPI-Project\obj\Debug\net5.0\ref\MyFirst-WebAPI-Project.dll
 F:\DotNetCore\MyFirst-WebAPI-Project\obj\Debug\net5.0\MyFirst-WebAPI-Project.pdb
 F:\DotNetCore\MyFirst-WebAPI-Project\obj\Debug\net5.0\MyFirst-WebAPI-Project.genruntimeconfig.cache
-F:\DotNetCore\MyFirst-WebAPI-Project\obj\Debug\net5.0\MyFirst-WebAPI-Project.csproj.AssemblyReference.cache
