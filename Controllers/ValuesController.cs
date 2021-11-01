@@ -21,5 +21,17 @@ namespace MyFirst_WebAPI_Project.Controllers
         {
             return "Get All Authors";
         }
+
+        [Route("books/{id}")]
+        public string GetById(int id)
+        {
+            return "Get " + id;
+        }
+        [Route("books/{id}/author/{authorId}")]
+        public string GetAuthorAddressById(int id, int authorId)
+        {
+            return "Get  books Id =  " + id + " author address Id =" + authorId;
+        }
+
     }
 }
